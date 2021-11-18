@@ -1,7 +1,7 @@
 # Borwell-Software-Challenge
 Borwell Software Challenge By Mohammed Belal
 
-This is my attempt at the Borwell Software Challenge to apply for a year's internship position at Borwell. As advised on the website, I have spent 4 hours on this project. 
+This is my attempt at the Borwell Software Challenge to apply for a year's internship position at Borwell. As advised on the website, I have spent 4 hours on this project. I decided to use Java with Maven to complete this project.
 
 Please note that the times in the git commit history may not reflect that as I ran into some issues with getting the JUnit tests to run outside of my IDE. However, I have resolved this by creating this new repository with a Maven-friendly structure, and copying the commits over to this new repository.
 
