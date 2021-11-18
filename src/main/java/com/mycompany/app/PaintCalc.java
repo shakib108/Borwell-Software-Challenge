@@ -55,18 +55,22 @@ public class PaintCalc {
     {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter room length: ");
-        String l = scanner.nextLine();
+        try {
+            System.out.print("Enter room length: ");
+            String l = scanner.nextLine();
+            length = Float.parseFloat(l);
 
-        System.out.print("Enter room width: ");
-        String w = scanner.nextLine();
+            System.out.print("Enter room width: ");
+            String w = scanner.nextLine();
+            width = Float.parseFloat(w);
 
-        System.out.print("Enter room height: ");
-        String h = scanner.nextLine();
-
-        length = Float.parseFloat(l);
-        width = Float.parseFloat(w);
-        height = Float.parseFloat(h);
+            System.out.print("Enter room height: ");
+            String h = scanner.nextLine();
+            height = Float.parseFloat(h);
+        } catch (IllegalArgumentException e)
+        {
+            System.out.println("\nInput must be numeric!");
+        }
 
         float floorArea = area(length, width);
         float wallSurfaceArea = surfaceArea(length, width, height);
