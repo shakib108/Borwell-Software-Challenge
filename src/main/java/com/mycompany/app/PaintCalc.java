@@ -4,8 +4,7 @@ public class PaintCalc {
 
     public static float area(float length, float width)
     {
-
-        return 0;
+        return length * width;
     }
 
     public static float surfaceArea(float length, float width, float height)
