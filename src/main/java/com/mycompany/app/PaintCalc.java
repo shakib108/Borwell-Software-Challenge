@@ -55,21 +55,33 @@ public class PaintCalc {
     {
         Scanner scanner = new Scanner(System.in);
 
-        try {
-            System.out.print("Enter room length: ");
-            String l = scanner.nextLine();
-            length = Float.parseFloat(l);
+        while (true) {
+            try {
+                System.out.print("Enter room length: ");
+                String l = scanner.nextLine();
+                length = Float.parseFloat(l);
 
-            System.out.print("Enter room width: ");
-            String w = scanner.nextLine();
-            width = Float.parseFloat(w);
+                System.out.print("Enter room width: ");
+                String w = scanner.nextLine();
+                width = Float.parseFloat(w);
 
-            System.out.print("Enter room height: ");
-            String h = scanner.nextLine();
-            height = Float.parseFloat(h);
-        } catch (IllegalArgumentException e)
-        {
-            System.out.println("\nInput must be numeric!");
+                System.out.print("Enter room height: ");
+                String h = scanner.nextLine();
+                height = Float.parseFloat(h);
+
+                if (length <= 0 || width <= 0 || height <= 0)
+                {
+                    throw new Exception();
+                }
+
+                System.out.println(length + width + height);
+
+                break;
+
+            } catch (Exception e)
+            {
+                System.out.println("\nInput must be a positive, non-zero real number!");
+            }
         }
 
         float floorArea = area(length, width);
