@@ -1,10 +1,16 @@
 package com.mycompany.app;
 
+import java.util.Scanner;
+
 /**
  Class that contains functions to calculate various properties of a room.
  Assumptions: Room is a simple rectangular prism
  */
 public class PaintCalc {
+
+    public static float length;
+    public static float width;
+    public static float height;
 
     /**
      * Calculate area of the room's floor
@@ -47,6 +53,32 @@ public class PaintCalc {
 
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter room length: ");
+        String l = scanner.nextLine();
+
+        System.out.print("Enter room width: ");
+        String w = scanner.nextLine();
+
+        System.out.print("Enter room height: ");
+        String h = scanner.nextLine();
+
+        length = Float.parseFloat(l);
+        width = Float.parseFloat(w);
+        height = Float.parseFloat(h);
+
+        float floorArea = area(length, width);
+        float wallSurfaceArea = surfaceArea(length, width, height);
+        float roomVolume = volume(length, width, height);
+
+        System.out.println(
+                "\nRoom Properties:\n"
+                        + "Floor Area        : " + floorArea + " m^2" +
+                        "\nWall Surface Area : " + wallSurfaceArea + " m^2" +
+                        "\nRoom Volume       : " + roomVolume + " m^3"
+        );
+
 
     }
 }
