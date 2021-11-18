@@ -9,8 +9,10 @@ public class PaintCalc {
 
     public static float surfaceArea(float length, float width, float height)
     {
+        float longWalls = 2 * (length * height);
+        float shortWalls = 2 * (width * height);
 
-        return 0;
+        return longWalls + shortWalls;
     }
 
     public static float volume(float length, float width, float height)
